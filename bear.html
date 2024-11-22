@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-熊</title>
+    <style>
+        .circle {
+            width: 350px;
+            height: 350px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .circle::before {
+            content: '';
+            width: 90px;
+            height: 90px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 35%;
+            left: -20px;
+        }
+
+        .circle::after {
+            content: '';
+            width: 90px;
+            height: 90px;
+            background: red;
+            border-radius: 50%;
+            position: absolute;
+            top: 35%;
+            right: -20px;
+        }
+
+        .mouth {
+            width: 130px;
+            height: 100px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -40%);
+        }
+
+        .mouth::before {
+            content: '';
+            width: 40px;
+            height: 30px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 20%;
+            left: 42%;
+            transform: translate(-20%, -40%);
+        }
+
+        .mouth::after {
+            content: '';
+            width: 90px;
+            height: 40px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 16%;
+        }
+
+        .ear1 {
+            width: 150px;
+            height: 50px;
+            /* background: lightblue; */
+            position: absolute;
+            top: -10px
+        }
+
+        .ear1::before {
+            content: '';
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            background: black;
+            left: 40px;
+        }
+
+        .ear1::after {
+            content: '';
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            position: absolute;
+            background: white;
+            left: 47px;
+            top: 8px;
+        }
+
+        .ear2 {
+            width: 150px;
+            height: 50px;
+            /* background: lightblue; */
+            position: absolute;
+            top: -10px;
+            right: 0;
+        }
+
+        .ear2::before {
+            content: '';
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            background: black;
+            right: 40px;
+        }
+
+        .ear2::after {
+            content: '';
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            position: absolute;
+            background: white;
+            right: 47px;
+            top: 8px;
+        }
+
+        .eye1 {
+            width: 175px;
+            height: 80px;
+            /* background: lightcyan; */
+            position: absolute;
+            top: 60px;
+        }
+
+        .eye1::before {
+            content: '';
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            left: 60px;
+        }
+
+        .eye1::after {
+            content: '';
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            left: 69px;
+            top: 10px;
+
+        }
+
+        .eye2 {
+            width: 175px;
+            height: 80px;
+            /* background: lightcyan; */
+            position: absolute;
+            top: 60px;
+            right: 0;
+        }
+
+        .eye2::before {
+            content: '';
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            right: 60px;
+        }
+
+        .eye2::after {
+            content: '';
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: black;
+            position: absolute;
+            right: 69px;
+            top: 10px;
+        }
+
+        .chest {
+            width: 350px;
+            height: 60px;
+            position: absolute;
+            bottom: 30px;
+        }
+
+        .chest::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background: white;
+            position: absolute;
+            left: 30%;
+            transform: skew(45deg, 0deg);
+        }
+
+        .chest::after {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background: white;
+            position: absolute;
+            right: 30%;
+            transform: skew(-45deg, 0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle">
+        <div class="ear1"></div>
+        <div class="ear2"></div>
+        <div class="mouth"></div>
+        <div class="eye1"></div>
+        <div class="eye2"></div>
+        <div class="chest"></div>
+    </div>
+</body>
+
+</html>

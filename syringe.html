@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS-針筒</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 40px;
+            background-image: linear-gradient(white, lightgray 50%, white);
+            border: 1px solid rgb(170, 170, 170);
+            border-radius: 2%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+
+        .box::before {
+            content: "";
+            width: 22.5px;
+            height: 48px;
+            background-color: gray;
+            border: 1px solid rgb(170, 170, 170);
+            background-image: linear-gradient(white, lightgray 50%, white);
+            border-radius: 15%;
+            position: absolute;
+            top: -5px;
+            left: -22.5px;
+
+        }
+
+        .box::after {
+            content: "";
+            width: 40px;
+            height: 0.1px;
+            background-color: white;
+            border: 1px solid rgb(170, 170, 170);
+            position: absolute;
+            top: 50%;
+            right: -42px;
+        }
+
+        .box1 {
+            width: 160px;
+            height: 50px;
+            background: black;
+            position: absolute;
+            top: -5px;
+            left: 21.5px;
+            z-index: -1;
+        }
+
+        .box1::before {
+            content: "Made in Taiwan";
+            width: 70px;
+            height: 48px;
+            background-color: lightblue;
+            background-image: linear-gradient(white, lightgray 50%, white);
+            border: 1px solid rgb(170, 170, 170);
+            position: absolute;
+            font-size: 7px;
+            line-height: 90px;
+            color: gray;
+        }
+
+        .box1::after {
+            content: "";
+            width: 70px;
+            height: 48px;
+            background: lightgoldenrodyellow;
+            border: 1px solid rgb(170, 170, 170);
+            position: absolute;
+            right: 0;
+        }
+
+        .line {
+            width: 160px;
+            height: 5px;
+            position: absolute;
+            top: -10%;
+            left: 11%;
+            background-size: 5px;
+            background-image:
+                linear-gradient(to right, rgb(170, 170, 170) 1px, transparent 1px);
+        }
+
+        .line::before {
+            content: "";
+            width: 15px;
+            height: 49px;
+            background: black;
+            position: absolute;
+            left: 72px;
+        }
+
+        .line::after {
+            content: "";
+            width: 70px;
+            height: 49px;
+            position: absolute;
+            top: -1px;
+            right: 1px;
+            border: 0.5px solid rgb(170, 170, 170);
+            background-image: linear-gradient(rgba(0, 0, 0, 0), lightgray 50%, rgba(0, 0, 0, 0));
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box1"></div>
+        <div class="line"></div>
+    </div>
+</body>
+
+</html>
